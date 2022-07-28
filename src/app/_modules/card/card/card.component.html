@@ -1,0 +1,36 @@
+<div class="card-wrapper" fxLayout="column" fxLayoutAlign="space-between">
+
+  <div class="header" fxLayout="row" fxLayoutAlign="start">
+    <div class="red" *ngIf="suit==='hearts' || suit==='diamonds'">
+      {{id}}
+    </div>
+    <div class="black" *ngIf="suit==='clubs' || suit==='spades'">
+      {{id}}
+    </div>
+  </div>
+
+  <div class="body" fxLayoutAlign="center" fxFlex fxLayoutAlign="center center">
+    <div class="red" *ngIf="suit==='hearts'">
+      <img src="assets/images/suits/hearts.png" alt="Hearts Card">
+    </div>
+    <div class="black" *ngIf="suit==='clubs'">
+      <img src="assets/images/suits/clubs.png" alt="Hearts Card">
+    </div>
+    <div class="red" *ngIf="suit==='diamonds'">
+      <img src="assets/images/suits/diamonds.png" alt="Hearts Card">
+    </div>
+    <div class="black" *ngIf="suit==='spades'">
+      <img src="assets/images/suits/spades.png" alt="Hearts Card">
+    </div>
+  </div>
+
+  <div class="footer" fxLayout="row" fxLayoutAlign="end center">
+    <div class="red" *ngIf="suit==='hearts' || suit==='diamonds'" >
+      {{id}}
+    </div>
+    <div class="black" *ngIf="suit==='clubs' || suit==='spades'" >
+      {{id}}
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+
+.deck-wrapper{
+  .top{
+    width: 85px;
+    height: 140px;
+
+    border: 2px solid #03256C;
+    border-radius: 5px;
+    //border-top-right-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    background-image: url('../../../../assets/images/backgrounds/skulls3.jpg');
+  }
+
+  .middle{
+  width: 6px;
+  height: 135px;
+  border: 1px solid #03256C;
+  background-image: url('../../../../assets/images/backgrounds/skulls3.jpg');
+  // border-top-right-radius: 5px;
+  // border-bottom-right-radius: 5px;
+  }
+
+  .right-side{
+    width: 6px;
+    height: 135px;
+    border: 1px solid #03256C;
+    border-left:none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url('../../../../assets/images/backgrounds/skulls3.jpg');
+  }
+
+
+
+
+}

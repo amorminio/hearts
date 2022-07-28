@@ -1,0 +1,17 @@
+<div class="deck-wrapper" fxLayout="row" fxLayoutAlign="start center">
+
+  <div class="top"></div>
+  <div *ngFor="let item of cards">
+    <div class="middle"></div>
+  </div>
+
+
+  <div class="right-side" *ngIf="cards.length>1"></div>
+
+
+</div>
+
+
+
+<div (click)="pickCard()">PICK</div>
+

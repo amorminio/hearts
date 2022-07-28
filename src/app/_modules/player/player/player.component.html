@@ -1,0 +1,14 @@
+<div class="player-wrapper" fxLayout="row">
+
+    <div class="avatar" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <img src="{{avatar}}" alt="">
+      <div class="name">{{name}}</div>
+    </div>
+
+    <div class="hand" fxLayout="row" fxLayoutGap="5px">
+      <div class="cards" *ngFor="let card of hand">
+        <card class="small" [suit]="card.suit" [id]="card.id" ></card>
+      </div>
+    </div>
+
+</div>
