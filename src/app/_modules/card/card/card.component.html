@@ -1,35 +1,35 @@
-<div class="card-wrapper" fxLayout="column" fxLayoutAlign="space-between">
+<div class="card-wrapper" fxLayout="column" fxLayoutAlign="space-between" [@cardHover]="cardHoverState__" (mouseenter)="setAnimation()" (mouseleave)="setAnimation()" >
 
   <div class="header" fxLayout="row" fxLayoutAlign="start">
-    <div class="red" *ngIf="suit==='hearts' || suit==='diamonds'">
-      {{id}}
+    <div class="red" *ngIf="card?.suit==='hearts' || card?.suit==='diamonds'">
+      {{card?.id | uppercase}}
     </div>
-    <div class="black" *ngIf="suit==='clubs' || suit==='spades'">
-      {{id}}
+    <div class="black" *ngIf="card?.suit==='clubs' || card?.suit==='spades'">
+		{{card?.id | uppercase}}
     </div>
   </div>
 
   <div class="body" fxLayoutAlign="center" fxFlex fxLayoutAlign="center center">
-    <div class="red" *ngIf="suit==='hearts'">
+    <div class="red" *ngIf="card?.suit==='hearts'">
       <img src="assets/images/suits/hearts.png" alt="Hearts Card">
     </div>
-    <div class="black" *ngIf="suit==='clubs'">
+    <div class="black" *ngIf="card?.suit==='clubs'">
       <img src="assets/images/suits/clubs.png" alt="Hearts Card">
     </div>
-    <div class="red" *ngIf="suit==='diamonds'">
+    <div class="red" *ngIf="card?.suit==='diamonds'">
       <img src="assets/images/suits/diamonds.png" alt="Hearts Card">
     </div>
-    <div class="black" *ngIf="suit==='spades'">
+    <div class="black" *ngIf="card?.suit==='spades'">
       <img src="assets/images/suits/spades.png" alt="Hearts Card">
     </div>
   </div>
 
   <div class="footer" fxLayout="row" fxLayoutAlign="end center">
-    <div class="red" *ngIf="suit==='hearts' || suit==='diamonds'" >
-      {{id}}
+    <div class="red" *ngIf="card?.suit==='hearts' || card?.suit==='diamonds'" >
+		{{card?.id| uppercase}}
     </div>
-    <div class="black" *ngIf="suit==='clubs' || suit==='spades'" >
-      {{id}}
+    <div class="black" *ngIf="card?.suit==='clubs' || card?.suit==='spades'" >
+		{{card?.id| uppercase}}
     </div>
   </div>
 

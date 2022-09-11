@@ -1,27 +1,36 @@
-<div class="tabble-wrapper" fxLayout="column" fxLayoutAlign="space-between">
+<div class="tabble-wrapper" fxLayout="column">
 
-  <div class="header" fxLayout="row" fxLayoutAlign="center center">
-      <player name="The Hacker" points=0 avatar=""></player>
-  </div>
+	<div class="header" fxLayout="row" fxLayoutAlign="center center">
+		<div class="player-hand" *ngFor="let card of _player3.hand">
+      		<card class="card" [card]="card"></card>
+		</div>
+	</div>
 
-  <div class="body" fxLayout="row" fxLayoutAlign="space-between">
-    <div class="left-player">
-      <player name="Chelles" points=0 avatar="assets/images/players/045-woman.png"></player>
-    </div>
+	<div class="body" fxLayout="row" fxLayoutAlign="space-around">
 
-    <div class="table-center" fxLayout="column" fxLayoutAlign="center center" fxFlex>
-      <deck ></deck>
-    </div>
+		<div class="left-player" fxLayout="row" fxLayoutAlign="center end">
+			<div class="player-hand" *ngFor="let card of _player2.hand">
+        		<card class="card left" [card]="card"></card>
+      		</div>
+		</div>
 
-    <div class="right-player">
-      <player name="Francisco" points=0 avatar="assets/images/players/069-dinosaur.png"></player>
-    </div>
-  </div>
+		<div class="table-center" fxLayout="column" fxFlex>
+      teste
+		</div>
 
-  <div class="footer" fxLayout="row" fxLayoutAlign="center center">
-    <player name="You" points=0 avatar=""></player>
-  </div>
+		<div class="right-player" fxLayout="row" fxLayoutAlign="center end">
+			<div class="player-hand" *ngFor="let card of _player4.hand">
+        		<card class="card" [card]="card"></card>
+      		</div>
+		</div>
+	</div>
 
+	<!-- human player -->
+	<div class="footer" fxLayout="row" fxLayoutAlign="center">
+		<div class="player-hand" *ngFor="let card of _player1.hand">
+      		<card class="card" [card]="card" [hoverAnimation]=true></card>
+		</div>
+	</div>
 
 
 </div>

@@ -4,49 +4,52 @@
 }
 
 .pallete1{
-  color:#03256C;
-  color:#2541B2;
-  color:#1768AC;
-  color:#06BEE1;
-  color:#FFFFFF;
+	color:#03256C;
+	color:#2541B2;
+	color:#1768AC;
+	color:#06BEE1;
+	color:#FFFFFF;
 }
 
 .card-wrapper{
 
-  width: 90px;
-  height: 150px;
+	margin-left: -40px;
 
-  border: 2px solid #03256C;
-  border-radius: 5px;
+	background-color: #fff;
+	width: 90px;
+	height: 150px;
 
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Wellfleet", Arial, Helvetica, sans-serif;;
+	border: 2px solid #03256C;
+	border-radius: 5px;
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "Wellfleet", Arial, Helvetica, sans-serif;;
 
-  .header{
-    margin:5%
-  }
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
-  .body{
-    background-color: #06BEE1;
-    border-radius: 10px;
-    border: 2px dashed white;
-    margin:20px;
-  }
+	.header{
+		margin:5%
+	}
 
-  .footer{
-    margin:5%
-  }
+	.body{
+		background-color: #06BEE1;
+		border-radius: 10px;
+		border: 2px dashed white;
+		margin:20px;
+	}
+
+	.footer{
+		margin:5%
+	}
 
 
-  .red{
-    color:#E64C3C;
-  }
+	.red{
+		color:#E64C3C;
+	}
 
-  .black{
-    color:#000;
-  }
+	.black{
+		color:#000;
+	}
 
 }

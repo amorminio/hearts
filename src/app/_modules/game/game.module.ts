@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table/table.component';
-import { CardModule } from '../card/card.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PlayerModule } from '../player/player.module';
+import { HeartsService } from 'src/app/_services/hearts.service';
+import { CardModule } from '../card/card.module';
 
 
 
@@ -14,11 +14,14 @@ import { PlayerModule } from '../player/player.module';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    CardModule,
-    PlayerModule
+    CardModule
+
   ],
   exports:[
     TableComponent
+  ],
+  providers:[
+    HeartsService
   ]
 })
 export class GameModule { }
