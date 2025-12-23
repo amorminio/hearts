@@ -1,0 +1,47 @@
+<div class="main-wrapper">
+
+    <div class="row1">
+        @for (card of player3?.cards; track $index) {
+        <card [card]="card" (click)="playCard(card)"></card>
+        }
+    </div>
+
+    <div class="row2">
+        <div class="left">
+
+            @for (card of player2?.cards; track $index) {
+            <div class="ycard" (click)="playCard(card)" ngClass="{ 'selected': card === selectedCard }">
+                {{card.value}} {{card.suit}}
+            </div>
+            }
+
+        </div>
+
+        <div class="center">
+            teste
+
+
+        </div>
+
+        <div class="right">
+            @for (card of player4?.cards; track $index) {
+            <div class="ycard" (click)="playCard(card)" ngClass="{ 'selected': card === selectedCard }">
+                {{card.value}} {{card.suit}}
+            </div>
+            }
+        </div>
+
+    </div>
+
+    <div class="row3">
+        @for (card of player1?.cards; track $index) {
+        <card [showCover]="false" [card]="card" (click)="playCard(card)"></card>
+        }
+    </div>
+
+
+    <div class="round-cards">
+
+    </div>
+
+</div>
