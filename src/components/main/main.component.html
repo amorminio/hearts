@@ -1,47 +1,52 @@
 <div class="main-wrapper">
 
-    <div class="row1">
-        @for (card of player3?.cards; track $index) {
+    <div class="player player1">
+        <div class="cards-container">
+            @for (card of player1?.cards; track $index) {
+            <div class="card">
+                <card [showCover]="false" [card]="card" (click)="playCard(card)"></card>
+            </div>
+            }
+        </div>
+    </div>
+    <div class="player player2"></div>
+    <div class="player player3"></div>
+    <div class="player player4"></div>
+    <!-- <div class="player player5"></div>
+    <div class="player player6"></div>
+    <div class="player player7"></div>
+    <div class="player player8"></div>
+    <div class="player player9"></div>
+    <div class="player player10"></div>
+    <div class="player player11"></div>
+    <div class="player player12"></div>
+    <div class="player player13"></div>
+    <div class="player player14"></div>
+    <div class="player player15"></div>
+    <div class="player player16"></div> -->
+
+    <!-- <div class="player1">
+        @for (card of player1?.cards; track $index) {
         <card [card]="card" (click)="playCard(card)"></card>
         }
     </div>
 
-    <div class="row2">
-        <div class="left">
-
-            @for (card of player2?.cards; track $index) {
-            <div class="ycard" (click)="playCard(card)" ngClass="{ 'selected': card === selectedCard }">
-                {{card.value}} {{card.suit}}
-            </div>
-            }
-
-        </div>
-
-        <div class="center">
-            teste
-
-
-        </div>
-
-        <div class="right">
-            @for (card of player4?.cards; track $index) {
-            <div class="ycard" (click)="playCard(card)" ngClass="{ 'selected': card === selectedCard }">
-                {{card.value}} {{card.suit}}
-            </div>
-            }
-        </div>
-
-    </div>
-
-    <div class="row3">
-        @for (card of player1?.cards; track $index) {
-        <card [showCover]="false" [card]="card" (click)="playCard(card)"></card>
+    <div class="player2">
+        @for (card of player2?.cards; track $index) {
+        <card [card]="card" (click)="playCard(card)"></card>
         }
     </div>
 
-
-    <div class="round-cards">
-
+    <div class="player3">
+        @for (card of player3?.cards; track $index) {
+        <card [card]="card" (click)="playCard(card)"></card>
+        }
     </div>
+    <div class="player4">
+        @for (card of player4?.cards; track $index) {
+        <card [card]="card" (click)="playCard(card)"></card>
+        }
+    </div> -->
+
 
 </div>

@@ -1,22 +1,22 @@
-<div class="card" [ngClass]="{ 'xcard': xcard, 'ycard': ycard }">
+<div class="card">
     @if(!showCover) {
     <div class="inner">
         <div class="top">
-            <div class="value">{{card.value}}</div>
+            <div class="value">{{card.value | cardValue}}</div>
             <ng-container *ngTemplateOutlet="suitIconTemplate; context: { suit: card.suit }"></ng-container>
         </div>
 
         <div class="center">
-            {{card.value}}
+            <ng-container *ngTemplateOutlet="suitIconTemplate; context: { suit: card.suit }"></ng-container>
         </div>
 
-        <div class="bottom" ngClass="{ 'red': card.suit === 'hearts' || card.suit === 'diamonds' }">
+        <div class="bottom">
             <ng-container *ngTemplateOutlet="suitIconTemplate; context: { suit: card.suit }"></ng-container>
-            <div class="value">{{card.value}}</div>
+            <div class="value">{{card.value | cardValue}}</div>
         </div>
 
     </div>
-    }@else {
+    } @else {
     <div class="cover">
 
     </div>
@@ -26,16 +26,16 @@
 <ng-template #suitIconTemplate let-suit="suit">
     @switch (suit) {
     @case ('hearts') {
-    <mat-icon class='red' svgIcon="phosphor:heart"></mat-icon>
+    <mat-icon class='red' svgIcon="phosphor:fill_heart"></mat-icon>
     }
     @case ('diamonds') {
-    <mat-icon class='red' svgIcon="phosphor:diamond"></mat-icon>
+    <mat-icon class='red' svgIcon="phosphor:fill_diamond"></mat-icon>
     }
     @case ('clubs') {
-    <mat-icon class="black" svgIcon="phosphor:club"></mat-icon>
+    <mat-icon class="black" svgIcon="phosphor:fill_club"></mat-icon>
     }
     @case ('spades') {
-    <mat-icon class="black" svgIcon="phosphor:spade"></mat-icon>
+    <mat-icon class="black" svgIcon="phosphor:fill_spade"></mat-icon>
     }
     }
 </ng-template>
